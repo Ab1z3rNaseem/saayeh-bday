@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="main_page_style.css">
+</head>
+<body>
+
+
+<h1 class="main_greeting" onmouseenter="startConfetti();"> HAPPY BIRTHDAY TO MY GHORBUNET BERAM 🎂 </h1>
+
+<p>Saayeh Hall Of Fame:</p>
+<div class="slideshow-container">
+
+  <div class="slidesGroup1">
+    <img src="Saayehs_birthday_images/Group1_img1.jpg" style="width:100%">
+  </div>
+
+  <div class="slidesGroup1">
+    <img src="Saayehs_birthday_images/Group1_img2.jpg" style="width:50%">
+  </div>
+
+  <div class="slidesGroup1">
+    <img src="Saayehs_birthday_images/Group1_img3.jpg" style="width:20%">
+  </div>
+
+  <div class="slidesGroup1">
+    <img src="Saayehs_birthday_images/Group1_img4.jpg" style="width:30%">
+  </div>
+
+  <div class="slidesGroup1">
+    <img src="Saayehs_birthday_images/Group1_img5.jpg" style="width:30%">
+  </div>
+
+  <div class="slidesGroup1">
+    <img src="Saayehs_birthday_images/Group1_img6.png" style="width:25%">
+  </div>
+
+  <div class="slidesGroup1">
+    <img src="Saayehs_birthday_images/Group1_img7.png" style="width:20%">
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+</div>
+
+<p>2, 3, 5, 7, 11, 13, 17, 19, 23, 29</p>
+
+<!-- Cuz baby these hearts can never be divided -->
+
+<div class="slideshow-container">
+
+  <div class="slidesGroup3">
+    <img src="Saayehs_birthday_images/Us_img1.jpg" style="width:90%">
+  </div>
+
+  <div class="slidesGroup3">
+    <img src="Saayehs_birthday_images/Us_img2.jpg" style="width: 30%">
+  </div>
+
+  <div class="slidesGroup3">
+    <img src="Saayehs_birthday_images/Us_img3.jpg" style="width:100%">
+  </div>
+
+  <div class="slidesGroup3">
+    <img src="Saayehs_birthday_images/Us_img4.jpg" style="width:80%">
+  </div>
+
+  <div class="slidesGroup3">
+    <img src="Saayehs_birthday_images/Us_img5.jpg" style="width:100%">
+  </div>
+
+  <div class="slidesGroup3">
+    <img src="Saayehs_birthday_images/Us_img6.jpg" style="width:80%">
+  </div>
+
+  <div class="slidesGroup3">
+    <img src="Saayehs_birthday_images/Us_img7.jpg" style="width:40%">
+  </div>
+
+  <div class="slidesGroup3">
+    <img src="Saayehs_birthday_images/Us_img8.jpg" style="width:40%">
+  </div>
+
+  <div class="slidesGroup3">
+    <img src="Saayehs_birthday_images/Us_img9.jpg" style="width:40%">
+  </div>
+
+  <div class="slidesGroup3">
+    <img src="Saayehs_birthday_images/Us_img10.png" style="width:40%">
+  </div>
+
+  <div class="slidesGroup3">
+    <img src="Saayehs_birthday_images/Us_img11.jpg" style="width:30%">
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1, 2)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1, 2)">&#10095;</a>
+</div>
+
+<p>The FAM:</p>
+<div class="slideshow-container">
+  <div class="slidesGroup2">
+    <img src="Saayehs_birthday_images/Fam_img1.jpeg" style="width:100%">
+  </div>
+
+  <div class="slidesGroup2">
+    <img src="Saayehs_birthday_images/Fam_img2.jpg" style="width:50%">
+  </div>
+
+  <div class="slidesGroup2">
+    <img src="Saayehs_birthday_images/Fam_img3.jpg" style="width:30%">
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
+</div>
+
+<script src="./confetti-falling-animation/confetti.js"></script>
+
+<button class="typeWriter_button" onclick="typeWriter()">Click Me!</button>
+
+<p id="demo"></p>
+
+<script>
+var i = 0;
+var txt = 'Hello my amazing Rockstar! Happy! Happy! Happy birthday to the love of my life <3 Whew! Where do I even start, its been a hell of a year and WERE ONLY GETTING STARTED! ' +
+'From coming over for the first time {shish vibessss} to becoming HumZindagi, there is not a moment I would change spent with you! ' +
+'Have an amazing day azezam, enjoy this 21st birthday and have a BLAST! ' +
+'I miss you immensely, we shall make up for this birthday in JULY! ' + 
+'Please do have an extra birthday shot from my side, an extra CHEERS';
+var speed = 50;
+
+function typeWriter() {
+  if (i < txt.length) {
+    document.getElementById("demo").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+}
+</script>
+
+<script>
+let slideIndex = [1,1,1];
+let slideId = ["slidesGroup1", "slidesGroup2", "slidesGroup3"]
+showSlides(1, 0);
+showSlides(1, 1);
+showSlides(1, 2);
+
+function plusSlides(n, no) {
+  showSlides(slideIndex[no] += n, no);
+}
+
+function showSlides(n, no) {
+  let i;
+  let x = document.getElementsByClassName(slideId[no]);
+  if (n > x.length) {slideIndex[no] = 1}    
+  if (n < 1) {slideIndex[no] = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex[no]-1].style.display = "block";  
+}
+</script>
+
+</body>
+</html> 
